@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Timer</title>
+
+</head>
+<body>
+<div>
+	<h1 id="timer"></h1>
+	<button id ="reset">Reset</button>
+</div>
+</body>
+<script type="text/javascript">
+		var tick=document.getElementById('timer') ;
+		var time=10;
+		setInterval(function(){			
+			
+			time=time-1;
+			if (time>=0){
+				tick.innerHTML=time;
+			}
+			console.log(time);
+		},1000);
+		document.getElementById('reset').addEventListener('click',function(){
+			time=prompt("Enter Time");
+		})
+	</script>
+</html>
